@@ -11,6 +11,6 @@ for i_num in grades:
     i_sum = (sum(i_num) / len(i_num))
     list_grades.append(i_sum)
 
-for j_num in range(len(list_grades)):
-    my_answer.update({cor_students[j_num]:list_grades[j_num]})
+for students, grades  in zip(cor_students, list_grades):
+    my_answer.update({students: grades})
 print(my_answer)
